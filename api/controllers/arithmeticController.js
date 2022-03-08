@@ -10,9 +10,10 @@ exports.calculate = function(req, res) {
     res.json({ error: err.message });
   });
 
+  // Using the = operator to type cast variables as intergers in order to prevent string concatenation
+  
   var operations = {
     'add':      function(a,b) { return +a + +b },
-    // Using the = operator to type cast variables as intergers in order to prevent string concatenation
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
